@@ -1,4 +1,6 @@
 # property-tax-superusers
 
-## Known Data Quality issues 
+## Table Data Dictionary
+coming soon.
+## Known Data Quality issues and explanations
 coming soon.
