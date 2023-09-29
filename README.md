@@ -1,20 +1,29 @@
-# Welcome Propert Tax Assessment Database Super Users!
+# Welcome Assessment Database Super Users!
 
-This repo was created to help answer common questions about becoming a super user who can query the Utah property tax assessment database. This repo also contains helpful sql scripts and other templates for common analytics. 
+## What is this repository?
+This repository was created to help answer common questions about becoming a super user and how to query the property tax assessment database. This repo also contains helpful sql scripts and other templates for common analysis. 
 
 ## What is a Super User? 
 
 A Super User has the ability to access the raw data stored in our database using SQL queries. If you do not have the technical skills or expertise to be a super user, you can hire a person with those skills and they can be given super user access to perform analysis for you. 
 
-Super Users are billed for the queries that they perform in their Google Cloud Project. Google Cloud Platform has a “Free Tier” of services which covers up to 1TB of queries per month (Depending on the size and complexity of the query, this usually covers 10-20  complex queries), however any queries beyond that limit will be charged to the super user. Billing is complexly calculated by Google, but a good rule of thumb is ~$5 per 1TB of data queried. If you notice your bill increasing or costing lots of money please reach out and we can show you how to partition your tables and query in a way that reduces costs.
+Super Users are billed for the queries that they perform in their Google Cloud Project. Google Cloud Platform has a “Free Tier” of services which covers up to 1TB of queries per month (Depending on the size and complexity of the query, this usually covers 10-20  complex queries), however any queries beyond that limit will be charged to the super user. The exact billing is determined by your billing plan by Google, but a good rule of thumb is ~$5 per 1TB of data queried. If you notice your bill increasing or costing lots of money please reach out and we can show you how to partition your tables and query in a way that reduces costs.
 ## What is the process for becoming a Super User? 
 
-To become a super user, there are two steps:
+To become a super user, there are a few steps:
 
 1. Please send  Alex Nielson a valid gmail account you want to gain access to the data. If you do not have a gmail account, you will need to set one up for your user or organization. 
 
 2. Next, set up a Google Cloud platform billing account and project for the valid gmail account you sent Alexander Nielson. The steps to do this are detailed in this pdf: https://docs.google.com/document/d/1H8U5pGS4iY7J6YyuPrGwSBbECM2nm8Q3MdNNmR9aqgc/edit?usp=sharing
 
+3. Confirm you have access to the database by pasting the following query into your Big Query console:
+```
+SELECT county, year FROM `ut-sao-tax-prod.research_public.tax_roll`
+```
+
+If you have a green "check" mark in the upper right hand corner of the query editor page then you are good to go!
+
+4. (Optional) If you wish to request a one time 30 minute database demo and explanation of the database, this can be scheduled with Alexander Nielson (alexnielson@utah.gov) per his schedule. These meetings are at the Office of the State Auditor’s whim and convenience. If we do not have the time or resources, you may not get a tutorial meeting. 
 
 ## How do I perform queries in R, Python or a different software?
 
@@ -26,8 +35,6 @@ This tutorial will document how you can set up a service account: https://docs.g
 ## I still have questions
 
 If you have other questions please email Alexander Nielson (alexnielson@utah.gov).
-
-If you wish to request a one time 30 minute database demo and explanation of the database, this can be scheduled with Alexander Nielson (alexnielson@utah.gov) per his schedule. These meetings are at the Office of the State Auditor’s whim and convenience. If we do not have the time or resources, you may not get a tutorial meeting. 
 
 ## Table Data Dictionary
 
